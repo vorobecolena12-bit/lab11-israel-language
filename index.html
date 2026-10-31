@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Language Learning</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="prapor.png">
+    <script src="jquery-4.0.0.min.js"></script>
+     <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="app-container">
+        <div id="word-card" class="card">
+            <span id="current-word" dir="rtl">מילה</span>
+            <small class="card-hint">Натисніть на картку або Enter для перевірки</small>
+        </div>
+        <div class="step-navigation">
+            <button id="prev-btn" class="nav-btn">&larr;</button>
+            <span id="step-counter" class="step-counter">1/10</span>
+            <button id="next-btn" class="nav-btn">&rarr;</button>
+        </div>
+        <div class="input-wrapper">
+            <input 
+                type="text" 
+                id="translation-input" 
+                placeholder="Введіть переклад українською..." 
+                autocomplete="off"  >
+            <div id="validation-error" class="error-message"></div>
+        </div>
+        <div class="stats-section">
+            <h3 class="stats-title">Статистика</h3>
+            <div class="stats-counters">
+                <div class="stat-item correct">
+                    <span>Вірно</span>
+                    <strong id="correct-count">0</strong>
+                </div>
+                <div class="stat-item wrong">
+                    <span>Невірно</span>
+                    <strong id="wrong-count">0</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="political-ad" class="ad-banner">
+        <button id="close-ad" class="close-ad-btn">&times;</button>
+        <div id="ad-content-wrapper"></div>
+    </div>
+    <div id="result-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Ваш результат</h2>
+            <img id="modal-gif" src="" alt="Реакція" class="result-gif">
+            <p id="modal-score" class="modal-score"></p>
+            <p id="modal-level" class="modal-level"></p>
+            <button id="restart-btn" class="restart-btn">Спробувати знову</button>
+        </div>
+    </div>
+</body>
+</html>
